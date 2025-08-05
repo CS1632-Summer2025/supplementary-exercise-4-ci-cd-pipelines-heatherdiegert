@@ -35,7 +35,8 @@ jobs:
         run: sudo apt-get -y install google-chrome-stable
 
       - name: Install Chrome Web Driver
-        run: selenium/manager/linux/selenium-manager --browser chrome
+        uses: nanasess/setup-chromedriver@v2
+        # run: selenium/manager/linux/selenium-manager --browser chrome
 
       - name: Launch Web Service
         run: docker compose up -d
